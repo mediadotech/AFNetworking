@@ -81,6 +81,9 @@
             location = "group:AFNetworking/AFURLResponseSerialization.m">
          </FileRef>
       </Group>
+      <FileRef
+         location = "group:PrivacyInfo.xcprivacy">
+      </FileRef>
    </Group>
    <Group
       location = "group:UIKit+AFNetworking"
