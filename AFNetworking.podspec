@@ -11,7 +11,6 @@ Pod::Spec.new do |s|
   
   s.public_header_files = 'AFNetworking/AFNetworking.h'
   s.source_files = 'AFNetworking/AFNetworking.h'
-  s.resource_bundles = {'AFNetworking' => ['AFNetworking/PrivacyInfo.xcprivacy']}
   
   pch_AF = <<-EOS
 #ifndef TARGET_OS_IOS
@@ -27,6 +26,10 @@ EOS
   s.ios.deployment_target = '7.0'
   s.osx.deployment_target = '10.9'
   s.watchos.deployment_target = '2.0'
+  
+  s.subspec 'Core' do |ss|
+    ss.resource_bundles = {'AFNetworking' => ['AFNetworking/PrivacyInfo.xcprivacy']}
+  end
   
   s.subspec 'Serialization' do |ss|
     ss.source_files = 'AFNetworking/AFURL{Request,Response}Serialization.{h,m}'
